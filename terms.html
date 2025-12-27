@@ -1,66 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Serviço – n8n</title>
+    <title>Terms of Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff;
-            --text-color: #333;
-            --heading-color: #222;
-            --background-color: #f4f7f6;
-            --container-bg: #fff;
-            --border-color: #eee;
-            --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --primary-color: #3182CE;
+            --text-color: #4A5568;
+            --heading-color: #1A202C;
+            --background-color: #F7FAFC;
+            --container-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+            --shadow-color: rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
             color: var(--text-color);
-            max-width: 850px;
-            margin: 50px auto;
-            padding: 0 25px;
             background-color: var(--background-color);
+            margin: 0;
+            padding: 40px 20px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             background-color: var(--container-bg);
-            padding: 40px;
+            padding: 50px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px var(--shadow-light), 0 2px 8px var(--shadow-light);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px var(--shadow-color);
+            border: 1px solid var(--border-color);
         }
         
-        h1, h2 {
-            color: var(--heading-color);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-        }
-
-        h1 {
-            font-size: 2.2em;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 15px;
-            margin-top: 0;
+        header {
             text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin: 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        h2 {
-            font-size: 1.6em;
+        nav a {
+            font-weight: 600;
+            font-size: 1.1em;
             color: var(--primary-color);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
-        p {
+        nav a:hover, nav a.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 2em;
             margin-bottom: 1em;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
         }
 
+        p, ul {
+            margin-bottom: 1.5em;
+            color: #2D3748;
+        }
+        
         strong {
             color: var(--heading-color);
             font-weight: 600;
@@ -69,72 +98,59 @@
         a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.2s ease;
+            font-weight: 600;
         }
 
         a:hover {
-            color: #0056b3; /* A slightly darker primary color */
             text-decoration: underline;
         }
-
-        nav {
+        
+        footer {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav a {
-            margin: 0 18px;
-            font-weight: 600;
-            font-size: 1.1em;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        nav a:hover {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-decoration: none;
-        }
-
-        code {
-            background-color: #e8e8e8;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
             font-size: 0.9em;
-            color: #c0392b;
+            color: #718096;
         }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="index.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-        </nav>
-        <h1>Terms of Service</h1>
-        <p>By using this application and its integrations, you agree to the following terms and conditions.</p>
+        <header>
+            <h1>Terms of Service</h1>
+            <nav>
+                <a href="index.html">Privacy Policy</a>
+                <a href="terms.html" class="active">Terms of Service</a>
+            </nav>
+        </header>
+
+        <p><strong>Last Updated:</strong> 2025-12-27</p>
+
+        <p>By accessing or using our application, you agree to be bound by these Terms of Service. These terms govern your use of the application and its integrations with third-party services ("Third-Party Services").</p>
         
-        <h2>1. Use of the Service</h2>
-        <p>You agree to use the service responsibly and in compliance with the policies of any third-party platforms you integrate with (such as Meta/Facebook/Instagram). Misuse of the service for automations that violate third-party policies is your sole responsibility.</p>
+        <h2>1. Responsible Use</h2>
+        <p>You agree to use our service in a lawful and responsible manner. You are solely responsible for ensuring that your use of the service, including any automations you create, complies with the terms and policies of any connected Third-Party Services.</p>
         
         <h2>2. User Responsibility</h2>
-        <p>You are responsible for managing and protecting your environment, including credentials, access tokens, and workflows. The security of your instance and the data processed within it depends on the best practices you adopt.</p>
+        <p>You are responsible for the security and management of your account, credentials, and any data you process. This includes safeguarding your access tokens and other sensitive information required for integrations to function.</p>
+
+        <h2>3. Disclaimer of Warranty</h2>
+        <p>The application is provided "as is" and "as available," without any warranties of any kind, express or implied. We do not guarantee that the service will be uninterrupted, secure, or error-free.</p>
         
-        <h2>3. Limitation of Liability</h2>
-        <p>The application is provided "as is." We are not liable for any data loss, business interruption, or other direct or indirect damages resulting from the use or inability to use the service.</p>
+        <h2>4. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of the application.</p>
         
-        <h2>4. Intellectual Property</h2>
-        <p>You retain all rights to the workflows and data you create and process. We claim no ownership over your content.</p>
+        <h2>5. Intellectual Property</h2>
+        <p>You retain full ownership of the data and content you create and process through our application. We do not claim any ownership rights over your intellectual property.</p>
         
-        <h2>5. Modifications to the Terms</h2>
-        <p>We may revise these Terms of Service periodically. The most current version will always be available on this page. Your continued use of the service after any changes constitutes your acceptance of the new terms.</p>
-        
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions or requests regarding these terms, please contact: <a href="mailto:rodrigo2mauricio@gmail.com">rodrigo2mauricio@gmail.com</a></p>
+        <h2>6. Modifications to Terms</h2>
+        <p>We reserve the right to modify these terms at any time. We will provide notice of significant changes by updating the "Last Updated" date. Your continued use of the application after such changes constitutes your acceptance of the new terms.</p>
+
+        <footer>
+            <p>For any questions regarding these Terms of Service, please contact us at <a href="mailto:rodrigo2mauricio@gmail.com">rodrigo2mauricio@gmail.com</a>.</p>
+        </footer>
     </div>
 </body>
 </html>
